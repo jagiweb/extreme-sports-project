@@ -1,11 +1,25 @@
-<% @sports.each do |sport|%>
-<%= sport.name%>
-<%= sport.description%>
+<style>
+p.solid {
+  border-style: solid;
+  margin-top: 100px;
+  color: CornflowerBlue;
+} </style>
+
+
+
+<% @sports.each do |sport| %>
+<p class = "solid">
+<%= link_to sport.name, sport%><br>
 <%= sport.price_per_person%>
-<% end%>
+<%= link_to image_tag(sport.main_image, size: "300x300"), sport%>
+<%= sport.description%>
 <%= %>
 <%= %>
-<%= %>
+<%end%>
+</p>
+
+
+
 
 
 

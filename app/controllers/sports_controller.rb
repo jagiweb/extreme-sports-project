@@ -16,6 +16,10 @@ class SportsController < ApplicationController
         end
     end
 
+    def sport_image
+      @sport = Sport.find(params[:id]).main_image
+    end
+
     def show
         @sport = Sport.find(params[:id])
     end

@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
-  resources :sports, only: [:show, :new, :create, :edit, :update]
+  resources :sports, only: [:index, :show, :new, :create, :edit, :update]
   resources :events
-  get '/', to: 'sports#index' as: 'sports'
-  get '/paintball', to: 'sports#paintball', as: 'paintball'
-  get '/motocross', to: 'sports#motocross', as: 'motocross'
-  get '/parkour', to: 'sports#parkour', as: 'parkour'
-  get '/rock_climbing', to: 'sports#rock_climbing', as: 'rock_climbing'
-  get '/sky_diving', to: 'sports#sky_diving', as: 'sky_diving'
-  get '/jet_skiing', to: 'sports#jet_skiing', as: 'jet_skiing'
-  get '/drifting', to: 'sports#drifting', as: 'drifting'
+  root "sports#index"
+  # get '/', to: 'sports#index' as: 'sports'
+  # get '/paintball', to: 'sports#paintball', as: 'paintball'
+  # get '/motocross', to: 'sports#motocross', as: 'motocross'
+  # get '/parkour', to: 'sports#parkour', as: 'parkour'
+  # get '/rock_climbing', to: 'sports#rock_climbing', as: 'rock_climbing'
+  # get '/sky_diving', to: 'sports#sky_diving', as: 'sky_diving'
+  # get '/jet_skiing', to: 'sports#jet_skiing', as: 'jet_skiing'
+  # get '/drifting', to: 'sports#drifting', as: 'drifting'
   # get '/paintball', to: 'sports#paintball' as: 'paintball'
 
 
