@@ -1,8 +1,11 @@
-<% @sports.each do |sport|%>
-<%= sport.name%>
-<%= sport.description%>
-<%= sport.price_per_person%>
+<div><% @sports.each do |sport|%>
+<ul>
+<li><%= sport.name%></li>
+<li><%= sport.description%></li>
+<li><%= sport.price_per_person%></li>
+</ul>
 <% end%>
+</div>
 <%= %>
 <%= %>
 <%= %>

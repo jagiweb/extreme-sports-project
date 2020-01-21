@@ -10,18 +10,90 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  <div class="container">
-    <nav class="menu">
-
-    <%= button_to 'Events', events_path, {class: 'btn btn-primary btn-menu'} %> <%= button_to 'Sports', sports_path, {class: 'btn btn-primary btn-menu'} %>
-    <% if current_user %>
-      Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-    <% else %>
-      <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-    <% end %>
-    </nav>
-    <%= yield %>
+  <body></body>
+    <div class="">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to 'Extreme Sports', sports_path, {class: 'navbar-brand'} %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to 'Home', '/', {class: "nav-link"} %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Events', events_path, {class: "nav-link"} %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Contact us', sports_path, {class: "nav-link"} %>
+        </li>
+      </ul>
+      <% if current_user %>
+        <span class="navbar-text padding-menu">
+          <%= "#{current_user.name}" %>
+        </span>
+        <span class="navbar-text padding-menu">
+          <%= link_to "Logout", '/logout' %>
+        </span>
+        <% else %>
+        <span class="navbar-text">
+          <%= link_to 'Login', '/login', {class: "nav-link padding-menu"}%>
+        </span>
+        <span class="navbar-text">
+          <%= link_to 'Signup', '/signup', {class: "nav-link padding-menu"} %>
+        </span>
+        <% end %>
+          <!--<div class="text-center">
+           <%= link_to "Signup test", '/signup', class: "btn btn-default btn-rounded mb-4", data: {toggle: "modal", target: "#modalRegisterForm"} %> 
+          </div>-->
+        
     </div>
+    </div>
+
+    <!-- ########################################### MODAL HERE!!! ############################## NEED TO BE FIXED  -->
+
+      <!--  <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" id="orangeForm-name" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="orangeForm-name">Your name</label>
+                </div>
+                <div class="md-form mb-5">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="email" id="orangeForm-email" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+                </div>
+
+                <div class="md-form mb-4">
+                  <i class="fas fa-lock prefix grey-text"></i>
+                  <input type="password" id="orangeForm-pass" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+                </div>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-deep-orange">Sign up</button>
+              </div>
+            </div>
+          </div>
+        </div> --> 
+    
+      <div class="container"><%= yield %></div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>$('.modal-dialog').parent().on('show.bs.modal', function(e){ $(e.relatedTarget.attributes['data-target'].value).appendTo('body'); })</script>
   </body>
+  
+
 </html>

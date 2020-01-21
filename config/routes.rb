@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :sports, only: [:show, :new, :create, :edit, :update]
+  resources :sports, only: [:index, :show, :new, :create, :edit, :update]
   resources :events
-  get '/', to: 'sports#index' as: 'sports'
+  
+  # get '/', to: 'sports#index' as: 'sports'
   get '/paintball', to: 'sports#paintball', as: 'paintball'
   get '/motocross', to: 'sports#motocross', as: 'motocross'
   get '/parkour', to: 'sports#parkour', as: 'parkour'
