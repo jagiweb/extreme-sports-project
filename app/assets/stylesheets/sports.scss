@@ -1,0 +1,24 @@
+// Place all the styles related to the sports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@-ms-viewport{
+    width: device-width;
+  }
+.btn-menu{
+    background-color: transparent;
+    border-color: black;
+    color: black;
+
+}
+
+.btn-menu:hover{
+    color: black;
+    border-color: blue;
+}
+
+.menu {
+    text-align: center;
+    float: right;
+    display: inline-flex;
+    padding: 5px;
+}

@@ -1,0 +1,17 @@
+<% if current_user.admin == true %>
+<p>ITS AN ADMIN</p>
+
+<%= form_for(@sport) do |f|%>
+
+name<%= f.text_field :name%>
+description<%= f.text_area :description %>
+price<%= f.number_field :price_per_person %>
+<%= f.submit %>
+
+<% end %>
+
+<% else %>
+
+<p>NOT ADMIN</p>
+
+<% end %>
