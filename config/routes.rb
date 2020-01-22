@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :events
   root "sports#index"
   # get '/', to: 'sports#index' as: 'sports'
-  get '/paintball', to: 'sports#index', as: 'paintball'
+  get '/paintball', to: 'sports#paintball', as: 'paintball'
   get '/motocross', to: 'sports#motocross', as: 'motocross'
   get '/parkour', to: 'sports#parkour', as: 'parkour'
   get '/rock_climbing', to: 'sports#rock_climbing', as: 'rock_climbing'
