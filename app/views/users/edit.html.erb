@@ -1,0 +1,21 @@
+
+<% if current_user != nil%>
+<%= form_with model: @user do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.label :age %>
+<%= f.text_field :age%><br>
+<%= f.label :email %>
+<%= f.text_field :email%><br>
+<%= f.label :password %>
+<%= f.password_field :password%><br>
+<%= f.label :destroy_account %>
+<%= f.submit "save these Xtreme changes"%>
+<%end%>
+<%= button_to "Destroy Account", delete_user_path(@user), {method: 'delete'}%>
+
+<% else %>
+
+  <%= sports_path%>
+
+  <% end %>

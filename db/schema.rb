@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_123419) do
 
   create_table "day_types", force: :cascade do |t|
     t.string "name"
+    t.string "image_link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,8 +35,6 @@ ActiveRecord::Schema.define(version: 2020_01_22_123419) do
     t.integer "location_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "location"
-    t.string "location_map"
     t.index ["day_type_id"], name: "index_events_on_day_type_id"
     t.index ["location_id"], name: "index_events_on_location_id"
     t.index ["sport_id"], name: "index_events_on_sport_id"

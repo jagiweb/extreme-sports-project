@@ -34,7 +34,9 @@ class UsersController < ApplicationController
     def destroy
       @user = User.find(params[:id])
       @user.destroy
-      redirect_to users_path
+      session[:user_id] = nil
+        reset_session
+      redirect_to sports_path
     end
 
     private
