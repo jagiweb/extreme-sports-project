@@ -1,27 +1,42 @@
-<style>
-p.solid {
-  border-style: solid;
-  margin-top: 100px;
-  color: CornflowerBlue;
-} </style>
+<header>
+    <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://video.wixstatic.com/video/e9435a_161400cd85d142658eb5bfd9b0bcf0ab/1080p/mp4/file.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">ADRENALINE</h1>
+        <p class="lead mb-0"> Make your life extreme</p>
+      </div>
+    </div>
+  </div>
+</header>
 
+  <!-- ALL SPORTS -->
 
-
-<% @sports.each do |sport| %>
-<p class = "solid">
-<%= link_to sport.name, sport%><br>
-<%= sport.price_per_person%>
-<%= link_to image_tag(sport.main_image, size: "300x300"), sport%>
-<%= sport.description%>
-<%= %>
-<%= %>
-<%end%>
-</p>
-
-
-
-
-
+<section class="page-section" id="portfolio">
+  <div class="container margin-top-50">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Our Extreme Sports</h2>
+          <h5 class="section-subheading text-muted">Adrenaline everywhere babyyyy</h5>
+      </div>
+    </div>
+    
+    <div class="row color-white margin-top-50">
+    <% @sports.each do |sport| %>
+      <div class="col-lg-4 col-md-4 col-sm-6 box-sport">
+          
+          <figure>
+            <%= link_to image_tag(sport.main_image, size: "300x300"), sport%>
+            <figcaption><h4 class="text-center "><%= link_to sport.name, sport, {class: "link-button"}%></h4></figcaption>
+        </figure>
+      </div>
+    <%end%>
+    </div>
+  </div>
+</section>
 
 
 

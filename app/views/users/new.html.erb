@@ -1,13 +1,51 @@
-<!-- app/views/users/new.html.erb -->
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<%= image_tag 'moto.png' %>
+				</div>
+        <%= form_for :user, url: '/users', class:'login100-form' do |f| %>
+				
+					<span class="login100-form-title">
+						Create a new account
+					</span>
 
-<h1>Signup!</h1>
+          <div class="wrap-input100">
+            <%= f.text_field :name , class:'input100', placeholder: "Name" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-<%= form_for :user, url: '/users' do |f| %>
+					<div class="wrap-input100">
+            <%= f.text_field :email,class:'input100', placeholder: "Email" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+					<div class="wrap-input100">
+            <%= f.password_field :password, class: 'input100', placeholder: "Password" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
 
-<% end %>
+          <div class="wrap-input100">
+            <%= f.password_field :password_confirmation, class: 'input100', placeholder: "Password" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+				
+            <%= f.submit "Submit", class:'login100-form-btn margin-top-50' %>
+				
+        <% end %>
+			</div>
+		</div>
+	</div>
