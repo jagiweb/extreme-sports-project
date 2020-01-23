@@ -67,13 +67,13 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
   price_per_person: 300,
   main_image:"https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr03/11/12/enhanced-buzz-wide-16957-1397232214-14.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto&output-quality=auto&output-format=auto&downsize=360:*")
 
-  Sport.create(name: "Jet-Skiing",
-  description:"Riding an engine powered Jet Ski is the ultimate adrenaline rush. 
-  With an incredible average top speed of 75 miles per hour, these beasts are nothing 
-  to joke with. Reckless races or even freestyle competitions make the riders face each 
-  other in impressive contests. But watch out, the faster you ride it, the further you fly.",
-  price_per_person: 350,
-  main_image:"https://s3-eu-west-1.amazonaws.com/rb-cms/rbv5/production/uploads/cover_images/e66860fa624f1e4127a9fdb5d9121373edad/i1080x475.jpg")
+  # Sport.create(name: "Jet-Skiing",
+  # description:"Riding an engine powered Jet Ski is the ultimate adrenaline rush. 
+  # With an incredible average top speed of 75 miles per hour, these beasts are nothing 
+  # to joke with. Reckless races or even freestyle competitions make the riders face each 
+  # other in impressive contests. But watch out, the faster you ride it, the further you fly.",
+  # price_per_person: 350,
+  # main_image:"https://s3-eu-west-1.amazonaws.com/rb-cms/rbv5/production/uploads/cover_images/e66860fa624f1e4127a9fdb5d9121373edad/i1080x475.jpg")
 
   Sport.create(name: "Motocross",
   description:"Roaring motors, muddy bikes and raw territory. Motocross doesn’t care about obstacles, 
@@ -178,23 +178,23 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
     map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d550063.955607345!2d-0.7673116311807976!3d51.469878241479805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf8793a96c29ed02!2sInfinite%20Skydiving%20Solutions!5e0!3m2!1sen!2suk!4v1579708359677!5m2!1sen!2suk" 
   )
 
-  Location.create(
-    sport_id: 6,
-    address: "Long Beach, Harbour, Whitstable CT5 1AB",
-    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee46129e14ce365a!2sOyster%20Coast%20Watersports!5e0!3m2!1sen!2suk!4v1579708737811!5m2!1sen!2suk" 
-  )
+  # Location.create(
+  #   sport_id: 6,
+  #   address: "Long Beach, Harbour, Whitstable CT5 1AB",
+  #   map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee46129e14ce365a!2sOyster%20Coast%20Watersports!5e0!3m2!1sen!2suk!4v1579708737811!5m2!1sen!2suk" 
+  # )
 
-  Location.create(
-    sport_id: 6,
-    address: "Action Watersports, Lake 1 Dengemarsh Road, Romney Marsh TN29 9JH",
-    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x604fd6ed1d98046c!2sAction%20Watersports!5e0!3m2!1sen!2suk!4v1579708799006!5m2!1sen!2suk" 
-  )
+  # Location.create(
+  #   sport_id: 6,
+  #   address: "Action Watersports, Lake 1 Dengemarsh Road, Romney Marsh TN29 9JH",
+  #   map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x604fd6ed1d98046c!2sAction%20Watersports!5e0!3m2!1sen!2suk!4v1579708799006!5m2!1sen!2suk" 
+  # )
 
-  Location.create(
-    sport_id: 6,
-    address: "Unit 2-3, Apex Centre, Speedfields Park, Fareham PO14 1TP",
-    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe3d138ba956a2e6!2sWatercraft%20World!5e0!3m2!1sen!2suk!4v1579708851905!5m2!1sen!2suk" 
-  )
+  # Location.create(
+  #   sport_id: 6,
+  #   address: "Unit 2-3, Apex Centre, Speedfields Park, Fareham PO14 1TP",
+  #   map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe3d138ba956a2e6!2sWatercraft%20World!5e0!3m2!1sen!2suk!4v1579708851905!5m2!1sen!2suk" 
+  # )
 
   Location.create(
     sport_id: 7,
