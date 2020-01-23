@@ -2,6 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 // 1- MENU
+
+.text-77px{
+  font-size: 77px;
+
+}
+
+.text-50px{
+  font-size: 50px;
+}
+
+.text-17px{
+  font-size: 17px;
+}
+
+.text-25px{
+  font-size: 25px;
+}
+
+.fonts-hereeeee{
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Bangers', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.title-show{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.title-show2{
+  font-family: 'Bangers', cursive;
+}
+
+.title-page{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 // 2- 
 @-ms-viewport{
     width: device-width;
@@ -360,4 +396,9 @@
     -o-transition: .5s all;   
     -o-transition-delay: 5s; 
     transition: .5s all;   
+  }
+
+  .margin-bottom-50{
+
+    margin-bottom: 50px;
   }

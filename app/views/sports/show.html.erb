@@ -5,7 +5,7 @@
   </video>
   <div class="container h-100">
     <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
+      <div class="w-100 text-white title-show">
         <h1 class="display-3"><%= @sport.name%></h1>
         <p class="lead mb-0"> Make your life extreme</p>
       </div>
@@ -17,17 +17,19 @@
     <div class="text-center margin-top-50">
         <h1><%=@sport.name%> Events</h1>
     </div>
+    <% @sport.events.each do |event|%>
     <div class="row box-event">
         <div class="col-lg-4">
-            <%= link_to image_tag(@sport.main_image, size: "300x300"), @sport, {class:"img-fluid"}%>
+            <%= link_to image_tag(event.sport.main_image, size: "300x300"), event, {class:"img-fluid"}%>
         </div>
         <div class="col-lg-8 margin-top-25">
-            <h2><%= link_to @sport.name, @sport, {class: "link-button"}%></h2>
-            <p><%= @sport.description%></p>
-            <h4>Price per person: £<%= @sport.price_per_person%></h4>
-            <%= button_to 'Show More', @sport, {class:"btn btn-dark buttom-show"}%>
+            <h2><%= link_to "#{event.sport.name} #{event.day_type.name}", event, {class: "link-button text-25px title-page"}%></h2>
+            <p><%= event.sport.description%></p>
+            <h4>Price per person: £<%= event.sport.price_per_person%></h4>
+            <%= link_to 'Show More', event, {class:"btn btn-dark buttom-show"}%>
         </div>
         <br>
     </div>
+    <%end%>
 </div>
 

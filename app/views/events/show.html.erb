@@ -1,7 +1,41 @@
+<header>
+    <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://video.wixstatic.com/video/e9435a_161400cd85d142658eb5bfd9b0bcf0ab/1080p/mp4/file.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white title-show">
+        <h1 class="display-3 text-show"><%= "#{@event.sport.name}"%></h1>
+        <p class="lead mb-0"> Make your life extreme</p>
+      </div>
+    </div>
+  </div>
+</header>
 
-
-
-
-
-
-
+<div class="container"> 
+    <div class="row margin-top-50 margin-bottom-50">
+        <div class="col-lg-7 col-md-7 margin-top-50">
+            <h2 class="title-show text-50px"><%= "#{@event.sport.name} #{@event.day_type.name}"%></h2>
+            <h4 class="title-page text-50px"><%= "#{@event.date}" %></h4>
+            <p class="text-17px"><%= "#{@event.location.address}"%></p>
+            <h5 class="title-show2">Price: <%= @event.sport.price_per_person%></h5>
+            <h6 class="title-show margin-top-50">What this is all about?</h6>
+            <p class="text-17px"><%= "#{@event.sport.description}"%></p>
+        </div>
+        <div class="col-lg-5">
+            <iframe src=<%= @event.location.map_location%> width="400" height="400"></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            
+        </div>
+        <div class="col-lg-4">
+            <%= link_to 'Buy Ticket', '/', class: 'login100-form-btn margin-bottom-50'%>
+        </div>
+        <div class="col-lg-4">
+            
+        </div>
+    </div>
+</div>
