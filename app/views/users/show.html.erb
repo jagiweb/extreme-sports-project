@@ -1,31 +1,9 @@
-<%=@user.name%><br>
-<%=@user.age%><br>
-<%=@user.image%><br>
-<%=@user.email%><br>
-<%=@user.name%>
-
-
-
-
-
-
-
-<%=link_to "edit my profile", edit_user_path(@user)%>
-
-
-
-
-
-
-
-
-
 <% if current_user == @user%>
 
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<%= image_tag 'moto.png' %>
+					<%=image_tag(@user.image, size:'200x150')%>
 				</div>
         <%= form_with model: @user, class:'login100-form' do |f| %>			
 					<span class="login100-form-title">
@@ -65,3 +43,4 @@
   <%= sports_path%>
 
   <% end %>
+<%=link_to "edit my profile", edit_user_path(@user)%>git 
