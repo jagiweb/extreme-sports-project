@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :sports, only: [:index, :show, :new, :create, :edit, :update]
-  resources :events, only: [:index, :show, :new, :create, :edit, :update]
+  resources :events
+  resources :users, only: [:edit, :update, :show]
   root "sports#index"
   get '/ticket', to: 'events#ticket', as: 'ticket'
   # get '/', to: 'sports#index' as: 'sports'
@@ -19,5 +20,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/signup', to: 'users#new'
   post '/users', to: 'users#create'
+  delete '/users/:id', to: 'users#destroy'
+  delete '/users/:id/delete', to: 'users#destroy', as: 'delete_user'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

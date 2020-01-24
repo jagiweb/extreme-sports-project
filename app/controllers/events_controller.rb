@@ -26,7 +26,11 @@ class EventsController < ApplicationController
     end
 
     def edit
-        @event = Event.find(params[:id])
+        if current_user.admin == nil
+            @event = Event.find(params[:id])
+        else
+          redirect_to sports_path
+        end
     end
 
     def update

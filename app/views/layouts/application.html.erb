@@ -33,7 +33,7 @@
       </ul>
       <% if current_user %>
         <span class="navbar-text padding-menu">
-          <%= "#{current_user.name}" %>
+          <%=link_to "#{current_user.name}", user_path(current_user) %>
         </span>
         <span class="navbar-text padding-menu">
           <%= link_to "Logout", '/logout' %>
