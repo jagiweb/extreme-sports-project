@@ -82,9 +82,9 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
   price_per_person: 180,
   main_image: "https://i.pinimg.com/originals/a7/e9/34/a7e9343f9f0a34b1da90313936f4a137.jpg")
 
-  
-  DayType.create(name:"experience day")
+
   DayType.create(name:"practice")
+  DayType.create(name:"experience day")
   DayType.create(name:"tournament")
 
 
@@ -217,7 +217,7 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
 
 
   
-  2.times do User.create(
+  100.times do User.create(
     name: Faker::Internet.unique.username,
     age: Faker::Number.within(range:16..100),
     email: Faker::Internet.unique.email,

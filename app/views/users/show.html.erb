@@ -1,7 +1,7 @@
 <%=@user.name%><br>
 <%=@user.age%><br>
-<%=@user.image%><br>
+<%=image_tag(@user.image, size:'200x150')%><br>
 <%=@user.email%><br>
 <%=@user.name%>
 
-<%=link_to "edit my profile", edit_user_path(@user)%>
+<%=link_to "edit my profile", edit_user_path(@user)%>git 
