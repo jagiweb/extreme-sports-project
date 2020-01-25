@@ -4,20 +4,28 @@ class EventsController < ApplicationController
 
     end
 
+    def location
+        @event = find_by(params[:id])
+    end
     def index
         @events = Event.all
     end
 
     def new
+        if current_user.admin == true
         @event = Event.new
+        else
+            redirect_to events_path
+        end
     end
     
     def create
+
         if current_user.admin == true
             @event = Event.create(event_params)
-            redirect_to events_path
+            redirect_to @event
         else
-            redirect_to users_path
+            redirect_to sports_path
         end
     end
 
@@ -56,6 +64,6 @@ class EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:date, :sport_id)
+        params.require(:event).permit(:location_id, :sport_id, :day_type_id, :date)
     end
 end

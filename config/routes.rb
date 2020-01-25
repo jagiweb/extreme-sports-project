@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # get '/drifting', to: 'sports#drifting', as: 'drifting'
   
 
-
+  get '/event/location', to: 'events#location', as: 'location'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'

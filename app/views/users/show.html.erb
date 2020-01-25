@@ -1,9 +1,7 @@
-<% if current_user == @user%>
-
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<%=image_tag(@user.image, size:'200x150')%>
+					<%=image_tag(@user.image, size:'400x300')%>
 				</div>
         <%= form_with model: @user, class:'login100-form' do |f| %>			
 					<span class="login100-form-title">
@@ -27,20 +25,11 @@
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
-					
-			<%=link_to "edit my profile", edit_user_path(@user), class:'login100-form-btn margin-top-50 margin-bottom-50'%>	
-				
-        <% end %>
-
-     
+                <% if current_user == @user%>
+			        <%=link_to "edit my profile", edit_user_path(@user), class:'login100-form-btn margin-top-50 margin-bottom-50'%>	
+				<% end %>
+        <% end %>     
 			</div>
 		</div>
 	</div>
 
-
-<% else %>
-
-  <%= sports_path%>
-
-  <% end %>
-<%=link_to "edit my profile", edit_user_path(@user)%>git 

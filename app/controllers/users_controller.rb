@@ -9,10 +9,11 @@ class UsersController < ApplicationController
     
     def create
       @user = User.new(user_params)
-      if @user.save
+      if @user.save && @user.valid?
         session[:user_id] = @user.id
-        redirect_to '/'
+        redirect_to @user
       else
+        flash[:errors] = @user.errors.full_messages
         redirect_to '/signup'
       end
     end
@@ -22,7 +23,6 @@ class UsersController < ApplicationController
     end
 
     def edit
-      
       @user = User.find(params[:id])
       if current_user != @user
         redirect_to sports_path

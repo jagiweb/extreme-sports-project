@@ -1,8 +1,27 @@
 <div class="limiter">
+		
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<%= image_tag 'moto.png' %>
+
+					<div class="row margin-top-50">
+						<div class="col-lg-12">
+							<% if flash[:errors] %>
+							<div class="text-25px text-center ">
+								<% flash[:errors].each do |message| %>
+								<p class="text-25px title-show color-red"><%= message %></p>
+								<% end %>
+							</div>
+						<% end %>
+						<% if flash[:notice] %>
+								<div class="text-25px text-center ">
+								<p class="title-show text-25px color-red"><%= flash[:notice] %></p>
+								</div>
+						<% end %>
+						</div>
+					</div>
+					
 				</div>
         <%= form_tag '/login', class:'login100-form' do %>
 				

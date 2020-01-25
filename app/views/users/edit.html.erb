@@ -4,11 +4,11 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<%= image_tag 'moto.png' %>
+					<%=image_tag(@user.image, size:'400x300')%>
 				</div>
         <%= form_with model: @user, class:'login100-form' do |f| %>			
 					<span class="login100-form-title">
-						Create a new account
+						Edit Profile
 					</span>
 
           <div class="wrap-input100">
@@ -21,6 +21,14 @@
 
           <div class="wrap-input100">
             <%= f.text_field :age, class:'input100', placeholder: "Age" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+          <div class="wrap-input100">
+            <%= f.text_field :image, class:'input100', placeholder: "Age" %>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>

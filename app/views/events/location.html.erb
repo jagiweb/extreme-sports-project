@@ -1,0 +1,4 @@
+<%=form_with model: @event do |f| %>
+<%= f.label :location_id %>
+<%= f.collection_select :location_id, @event.sport.locations, :id, :address%>
+<%= f.submit %>

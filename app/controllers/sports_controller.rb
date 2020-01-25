@@ -4,7 +4,11 @@ class SportsController < ApplicationController
     end
 
     def new
+        if current_user.admin == true
         @sport = Sport.new
+    else
+        redirect_to sports_path
+    end
     end
     
     def create
@@ -44,6 +48,6 @@ class SportsController < ApplicationController
     private
 
     def sport_params
-        params.require(:sport).permit(:name, :description, :price_per_person)
+        params.require(:sport).permit(:name, :description, :price_per_person, :main_image)
     end
 end
