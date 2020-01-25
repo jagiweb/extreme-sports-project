@@ -1,0 +1,17 @@
+<% if current_user.admin == true %>
+<p>ITS AN ADMIN</p>
+
+<%= form_for(@event) do |f|%>
+
+<%= f.date_field :date%>
+<%= f.collection_select :sport_id, Sport.all, :id, :name%>
+<%= %>
+<%= f.submit %>
+
+<% end %>
+
+<% else %>
+
+<p>NOT ADMIN</p>
+
+<% end %>

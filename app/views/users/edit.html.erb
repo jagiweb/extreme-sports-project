@@ -1,18 +1,58 @@
 
-<% if current_user != nil%>
-<%= form_with model: @user do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %><br>
-<%= f.label :age %>
-<%= f.text_field :age%><br>
-<%= f.label :email %>
-<%= f.text_field :email%><br>
-<%= f.label :password %>
-<%= f.password_field :password%><br>
-<%= f.label :destroy_account %>
-<%= f.submit "save these Xtreme changes"%>
-<%end%>
-<%= button_to "Destroy Account", delete_user_path(@user), {method: 'delete'}%>
+<% if current_user == @user%>
+
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<%= image_tag 'moto.png' %>
+				</div>
+        <%= form_with model: @user, class:'login100-form' do |f| %>			
+					<span class="login100-form-title">
+						Create a new account
+					</span>
+
+          <div class="wrap-input100">
+            <%= f.text_field :name , class:'input100', placeholder: "Name" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+          <div class="wrap-input100">
+            <%= f.text_field :age, class:'input100', placeholder: "Age" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100">
+            <%= f.text_field :email,class:'input100', placeholder: "Email" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100">
+            <%= f.password_field :password, class: 'input100', placeholder: "Password" %>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+				
+            <%= f.submit "Submit", class:'login100-form-btn margin-top-50' %>
+				
+        <% end %>
+
+      <%= button_to 'Delete Account', delete_user_path(@user), method: :delete, class: 'login100-form-btn', data: { confirm: 'Are you sure?' } %>
+			</div>
+		</div>
+	</div>
+
 
 <% else %>
 

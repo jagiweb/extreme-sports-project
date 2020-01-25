@@ -1,7 +1,46 @@
-<%=@user.name%><br>
-<%=@user.age%><br>
-<%=image_tag(@user.image, size:'200x150')%><br>
-<%=@user.email%><br>
-<%=@user.name%>
+<% if current_user == @user%>
 
-<%=link_to "edit my profile", edit_user_path(@user)%>
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<%=image_tag(@user.image, size:'200x150')%>
+				</div>
+        <%= form_with model: @user, class:'login100-form' do |f| %>			
+					<span class="login100-form-title">
+						Profile of <%=@user.name%><br>
+					</span>
+
+          <div class="wrap-input100">
+            <p class="text-17px">Name: <%= @user.name%></p>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+          <div class="wrap-input100">
+            <p class="text-17px">Age: <%= @user.age%></p>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100">
+            <p class="text-17px">Email: <%= @user.email%></p>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+			<%=link_to "edit my profile", edit_user_path(@user), class:'login100-form-btn margin-top-50 margin-bottom-50'%>	
+				
+        <% end %>
+
+     
+			</div>
+		</div>
+	</div>
+
+
+<% else %>
+
+  <%= sports_path%>
+
+  <% end %>
+<%=link_to "edit my profile", edit_user_path(@user)%>git 

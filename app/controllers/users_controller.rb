@@ -22,7 +22,11 @@ class UsersController < ApplicationController
     end
 
     def edit
+      
       @user = User.find(params[:id])
+      if current_user != @user
+        redirect_to sports_path
+      end
     end
 
     def update
@@ -42,6 +46,6 @@ class UsersController < ApplicationController
     private
     
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :age)
     end
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :events
   resources :users, only: [:edit, :update, :show]
   root "sports#index"
+  get '/ticket', to: 'events#ticket', as: 'ticket'
   # get '/', to: 'sports#index' as: 'sports'
   # get '/paintball', to: 'sports#paintball', as: 'paintball'
   # get '/motocross', to: 'sports#motocross', as: 'motocross'
