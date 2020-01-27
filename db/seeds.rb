@@ -45,9 +45,8 @@ description: "Burnt rubber, dense smoke and pulsing adrenaline are the essential
 of a proper drifting race. Extremely close calls with an overwhelming pace trigger the enthusiasm 
 worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
  price_per_person: 200,
- main_image:
-  "https://s3-eu-west-1.amazonaws.com/hac-assets/blog/driftblog/drift1.jpg")
-
+ main_image: "https://www.fia.com/sites/default/files/styles/content_details/public/news/main_image/07217039_078_medium_0.jpg?itok=4_oC_jhL"
+ )
   Sport.create(name: "Rock-Climbing",
   description: "Rock climbing is a physically and mentally demanding sport, one that often tests 
   a climber's strength, endurance, agility and balance along with mental control. So rock climbing, 
@@ -67,6 +66,15 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
   price_per_person: 300,
   main_image:"https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr03/11/12/enhanced-buzz-wide-16957-1397232214-14.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto&output-quality=auto&output-format=auto&downsize=360:*")
 
+
+  Sport.create(name: "Motocross",
+    description:"Roaring motors, muddy bikes and raw territory. Motocross doesn’t care about obstacles, 
+    makes no halt at big air time and definitely is as blunt as it gets. Jumping over huge ramps and mastering 
+    difficult race courses, it's replacing any sign of fear with a big adrenaline rush.",
+    price_per_person: 180,
+    main_image: "https://i.pinimg.com/originals/a7/e9/34/a7e9343f9f0a34b1da90313936f4a137.jpg")
+
+
   # Sport.create(name: "Jet-Skiing",
   # description:"Riding an engine powered Jet Ski is the ultimate adrenaline rush. 
   # With an incredible average top speed of 75 miles per hour, these beasts are nothing 
@@ -75,17 +83,10 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
   # price_per_person: 350,
   # main_image:"https://s3-eu-west-1.amazonaws.com/rb-cms/rbv5/production/uploads/cover_images/e66860fa624f1e4127a9fdb5d9121373edad/i1080x475.jpg")
 
-  Sport.create(name: "Motocross",
-  description:"Roaring motors, muddy bikes and raw territory. Motocross doesn’t care about obstacles, 
-  makes no halt at big air time and definitely is as blunt as it gets. Jumping over huge ramps and mastering 
-  difficult race courses, it's replacing any sign of fear with a big adrenaline rush.",
-  price_per_person: 180,
-  main_image: "https://i.pinimg.com/originals/a7/e9/34/a7e9343f9f0a34b1da90313936f4a137.jpg")
 
-
-  DayType.create(name:"practice")
-  DayType.create(name:"experience day")
-  DayType.create(name:"tournament")
+  DayType.create(name:"experience day", image_link: "https://game-icons.net/icons/ffffff/000000/1x1/skoll/rank-1.svg")
+  DayType.create(name:"practice day", image_link: "https://game-icons.net/icons/ffffff/000000/1x1/skoll/rank-2.svg")
+  DayType.create(name:"tournament day", image_link: "https://game-icons.net/icons/ffffff/000000/1x1/skoll/rank-3.svg")
 
 
   Location.create(
@@ -178,6 +179,24 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
     map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d550063.955607345!2d-0.7673116311807976!3d51.469878241479805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf8793a96c29ed02!2sInfinite%20Skydiving%20Solutions!5e0!3m2!1sen!2suk!4v1579708359677!5m2!1sen!2suk" 
   )
 
+  Location.create(
+    sport_id: 6,
+    address: "1a, 21 Central Ave, Molesey, West Molesey KT8 2QH",
+    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753718.6373348862!2d-0.36587278050592476!3d51.488008762303885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a8ecc22c404687a!2sPure%20Dirt%20Motocross!5e0!3m2!1sen!2suk!4v1579708906747!5m2!1sen!2suk" 
+  )
+
+  Location.create(
+    sport_id: 6,
+    address: "High Wycombe HP10 9QH",
+    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753718.6373348862!2d-0.36587278050592476!3d51.488008762303885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c013489d25d662d!2sFlackwell%20Heath%20Moto%20Park!5e0!3m2!1sen!2suk!4v1579708942297!5m2!1sen!2suk" 
+  )
+
+  Location.create(
+    sport_id: 6,
+    address: "Billington Rd, Stanbridge, Leighton Buzzard LU7 9JH",
+    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753718.6373348862!2d-0.36587278050592476!3d51.488008762303885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee1a6a8d71866beb!2s210mx%20Moto%20Park!5e0!3m2!1sen!2suk!4v1579708985389!5m2!1sen!2suk" 
+  )
+
   # Location.create(
   #   sport_id: 6,
   #   address: "Long Beach, Harbour, Whitstable CT5 1AB",
@@ -196,23 +215,7 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
   #   map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848022.3587785815!2d-0.5382060189025814!3d51.48559794560908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbe3d138ba956a2e6!2sWatercraft%20World!5e0!3m2!1sen!2suk!4v1579708851905!5m2!1sen!2suk" 
   # )
 
-  Location.create(
-    sport_id: 7,
-    address: "1a, 21 Central Ave, Molesey, West Molesey KT8 2QH",
-    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753718.6373348862!2d-0.36587278050592476!3d51.488008762303885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a8ecc22c404687a!2sPure%20Dirt%20Motocross!5e0!3m2!1sen!2suk!4v1579708906747!5m2!1sen!2suk" 
-  )
-
-  Location.create(
-    sport_id: 7,
-    address: "High Wycombe HP10 9QH",
-    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753718.6373348862!2d-0.36587278050592476!3d51.488008762303885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c013489d25d662d!2sFlackwell%20Heath%20Moto%20Park!5e0!3m2!1sen!2suk!4v1579708942297!5m2!1sen!2suk" 
-  )
-
-  Location.create(
-    sport_id: 7,
-    address: "Billington Rd, Stanbridge, Leighton Buzzard LU7 9JH",
-    map_location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d753718.6373348862!2d-0.36587278050592476!3d51.488008762303885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee1a6a8d71866beb!2s210mx%20Moto%20Park!5e0!3m2!1sen!2suk!4v1579708985389!5m2!1sen!2suk" 
-  )
+  
 
 
 
@@ -234,13 +237,62 @@ worldwide amongst drivers and fans. Drifting truly is as extreme as it gets!",
 
   
 
-  105.times do Event.create(
+  # 105.times do Event.create(
+  #   date: Faker::Date.forward(days: 182),
+  #   sport_id: Faker::Number.within(range:1..6),
+  #   location_id: Faker::Number.within(range:1..6),
+  #   day_type_id: Faker::Number.within(range:1..3)
+  # ) end
+
+
+  15.times do Event.create(
     date: Faker::Date.forward(days: 182),
-    sport_id: Faker::Number.within(range:1..7),
-    location_id: Faker::Number.within(range:1..21),
+    sport_id: 1,
+    location_id: Faker::Number.within(range:1..3),
     day_type_id: Faker::Number.within(range:1..3)
   ) end
 
+  15.times do Event.create(
+    date: Faker::Date.forward(days: 182),
+    sport_id: 2,
+    location_id: Faker::Number.within(range:4..6),
+    day_type_id: Faker::Number.within(range:1..3)
+  ) end
+
+  15.times do Event.create(
+    date: Faker::Date.forward(days: 182),
+    sport_id: 3,
+    location_id: Faker::Number.within(range:7..9),
+    day_type_id: Faker::Number.within(range:1..3)
+  ) end
+
+  15.times do Event.create(
+    date: Faker::Date.forward(days: 182),
+    sport_id: 4,
+    location_id: Faker::Number.within(range:10..12),
+    day_type_id: Faker::Number.within(range:1..3)
+  ) end
+
+  15.times do Event.create(
+    date: Faker::Date.forward(days: 182),
+    sport_id: 5,
+    location_id: Faker::Number.within(range:13..15),
+    day_type_id: Faker::Number.within(range:1..3)
+  ) end
+
+  15.times do Event.create(
+    date: Faker::Date.forward(days: 182),
+    sport_id: 6,
+    location_id: Faker::Number.within(range:16..18),
+    day_type_id: Faker::Number.within(range:1..3)
+  ) end
+
+  # 15.times do Event.create(
+  #   date: Faker::Date.forward(days: 182),
+  #   sport_id: 7,
+  #   location_id: Faker::Number.within(range:19..21),
+  #   day_type_id: Faker::Number.within(range:1..3)
+  # ) end
 
 
   525.times do EventAttendee.create(

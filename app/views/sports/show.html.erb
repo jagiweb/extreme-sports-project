@@ -20,7 +20,7 @@
     <% @sport.events.each do |event|%>
     <div class="row box-event">
         <div class="col-lg-4">
-            <%= link_to image_tag(event.sport.main_image, size: "300x300"), event, {class:"img-fluid"}%>
+            <%= link_to image_tag(event.day_type.image_link, size: "300x300"), event, {class:"img-fluid"}%>
         </div>
         <div class="col-lg-8 margin-top-25">
             <h2><%= link_to "#{event.sport.name} #{event.day_type.name}", event, {class: "link-button text-25px title-page"}%></h2>
